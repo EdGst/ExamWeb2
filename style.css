@@ -1,0 +1,397 @@
+/*font-family: 'Great Vibes', cursive;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;*/
+
+/**********
+   FONT
+**********/
+
+body {
+
+    background-image: url('images/index/wallpaper.jpg');
+
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+body, html{
+    margin: 0!important;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.2); /* Couleur de superposition transparente */
+    backdrop-filter: blur(10px); /* Effet de flou */
+
+
+}
+
+/*applique la police d'écriture Oswald sur ces sélecteurs*/
+h2,
+nav,
+p,
+.oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+/*applique la police d'écriture Lato sur ces sélecteurs*/
+td, .lato {
+    font-family: 'Lato', sans-serif;
+}
+
+/*applique la police d'écriture Great Vibes sur ces sélecteurs*/
+h1,
+.great-vibes {
+    font-family: 'Great Vibes', cursive;
+}
+
+/**********
+  GENERAL
+**********/
+
+/*clear permets de reseter le float appliqués au DIV*/
+.clear {
+    clear: both;
+}
+
+
+/*applique un margin 0 et un padding 0 sur ces selecteurs*/
+
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*applique une taille de 1120px de large sur main et un margin auto*/
+main {
+    width: 1120px;
+    margin: 0 auto !important;
+    /*auto, permet de mettre la même marge a gauche et a droite*/
+}
+
+/*applique une majuscule forcé a certains textes*/
+.uppercase {
+    text-transform: uppercase;
+}
+
+/*Propriété des séparations*/
+header hr{
+    border: 0;
+    margin: 40px 0 40px;
+    height: 3px;
+
+}
+
+
+/*Propriété particuliére pour la séparations du header*/
+.hr-header {
+    margin: 20px 0 0!important;
+}
+
+/*Propriété particuliére pour la séparations du footer*/
+.hr-footer {
+    width: 90%;
+    margin: auto;
+    margin-top: 40px !important;
+}
+
+/*Propriété particuliére pour la séparations de section*/
+.hr-section {
+    margin: 20px 0 60px !important;
+}
+
+
+/***********
+   HEADER
+***********/
+
+header {
+    margin-bottom: 20px;
+    position: relative;
+    border: 3px solid black; /* Bord transparent */
+    border-radius: 10px; /* Arrondi des coins du cadre */
+    /* Couleur de fond*/
+    background: linear-gradient(45deg, #FF2400, #FF8C00, #FFD700, #ADFF2F, #00BFFF, #4B0082, #8B00FF);
+}
+
+/*applique des paramétres particulier au titre h1 La vie est en*/
+header h1 {
+    z-index: auto;
+    position: relative;
+    font-size: 65px;
+    color: #0089d2;
+    padding-top: 20px;
+    width: fit-content;
+
+}
+
+/*applique des paramétres particulier au titre h2 COULEURS*/
+header h2 {
+    font-size: 63px;
+    margin-top: -37px;
+    text-transform: uppercase;
+    color: #3d0077;
+    width: fit-content;
+}
+
+/*permet de mettre une ombre sur */
+h2 span {
+    text-shadow: 1px 1px 2px black;
+
+}
+
+/**********
+    NAV
+**********/
+
+/*enleve le surlignage sur le nav*/
+a {
+    text-decoration: none;
+}
+
+/*mettre en evidence l'onglet sélectionner et de changer sa taille*/
+.current a {
+    font-size: 27px;
+}
+
+
+/*agrandit la taille des caractéres du menu nav*/
+header nav ul li {
+    font-size: 23px;
+}
+
+/*permet de déplacer le menu navigation à la position souhaité en absolu*/
+nav {
+    position: absolute;
+    right: 151px;
+    top: 48px;
+    font-weight: 700;
+}
+
+/*permet d'enlever les puces a coté des nav*/
+ul {
+    list-style: none;
+
+}
+
+/*permets de mettre le menu navigation en ligne avec un espace de 25px entre chaque onglets*/
+nav ul li {
+    display: inline;
+    padding-left: 50px;
+}
+nav ul li a {
+    transition: transform 0.3s ease; /* Transition de l'échelle en 0.3 seconde avec une courbe d'accélération */
+}
+
+nav ul li a:hover {
+    transform: scale(1.1); /* Augmente la taille de 10% (ajustez la valeur selon votre préférence) */
+}
+
+/************
+   SECTION
+************/
+section {
+    margin-top: 35px;
+}
+
+/*titre chromothérapie : le bien-étre par les couleurs*/
+section h2 {
+
+    font-size: 20px;
+    text-transform: uppercase;
+    /* majuscules */
+    text-align: center;
+    /*permets de centrer le texte*/
+}
+
+.image-scroll {
+    overflow: hidden; /* Masque la barre de défilement */
+}
+
+.image-scroll-container {
+    width: 100%; /* Ajuste la largeur du conteneur */
+    white-space: nowrap; /* Empêche le retour à la ligne des images */
+}
+
+.image-scroll-wrapper {
+    animation: scrollImages 10s linear infinite; /* Animation pour déplacer les images */
+    display: flex; /* Utilise un conteneur flexible pour les images */
+}
+
+@keyframes scrollImages {
+    0% {
+        transform: translateX(0); /* Départ de l'animation */
+    }
+    100% {
+        transform: translateX(-100%); /* Fin de l'animation */
+    }
+}
+
+.image-scroll img {
+    width: 1120px; /* Largeur des images */
+    height: auto; /* Hauteur des images (ajustée proportionnellement) */
+    margin-right: 10px; /* Marge entre les images */
+}
+
+/*propriété du titre h3*/
+
+h3 {
+    font-size: 36px;
+    text-align: center;
+    /*permets de centrer le texte*/
+    margin: 20px 0 10px;
+
+
+}
+
+/*propriété pour la déscription des titres*/
+.title-description {
+    font-size: 20px;
+    text-align: center;
+    line-height: 140%;
+    margin-bottom: 20px;
+}
+
+/*propriété pour la déscription des couleurs en page index*/
+.color-description {
+    text-indent: 20px;
+    text-align: justify;
+    display: inline-block;
+    font-style: italic;
+    line-height: 125%;
+    font-size: 18px;
+}
+
+/* Mettre la première lettre d'une chaine de caractère en évidence*/
+.first-letter {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+/**********
+  FOOTER
+**********/
+
+
+footer {
+    text-align: center;
+    font-size: 30px;
+    height: 45px;
+    text-decoration: none;
+}
+
+
+
+/***********
+   COLUMN
+***********/
+
+/* agencement des colonnes */
+.col {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+/* supprime la marge sur le dernier élément*/
+.last {
+    margin-right: 0 !important;
+}
+
+
+/*Colonne pour le site*/
+
+
+.col-1-12 {
+    width: 75px;
+}
+
+.col-2-12 {
+    width: 170px;
+}
+
+.col-3-12 {
+    width: 265px;
+}
+
+.col-4-12 {
+    width: 360px;
+}
+
+.col-5-12 {
+    width: 455px;
+}
+
+.col-6-12 {
+    width: 550px;
+}
+
+.col-7-12 {
+    width: 645px;
+}
+
+.col-8-12 {
+    width: 740px;
+}
+
+.col-9-12 {
+    width: 835px;
+}
+
+.col-10-12 {
+    width: 930px;
+}
+
+.col-11-12 {
+    width: 1025px;
+}
+
+
+
+/*****************
+   COLORED BOARD
+******************/
+
+
+/**********
+   COLOR
+**********/
+
+.navblue {
+    color: #0000FF;
+}
+
+.navgreen {
+    color: #7FFF00;
+}
+
+.navyellow {
+    color: #FFFF00;
+}
+
+.navred {
+    color: #FF2400;
+}
+
+.deep-blue {
+    color: #000080;
+}
+
+.deep-red {
+    color: #8B0000;
+}
+
+.deep-yellow {
+    color: #FFD700;
+}
+.deep-green {
+    color: #006400;
+}
+
+
+/*couleurs utilisé sur le site*/
