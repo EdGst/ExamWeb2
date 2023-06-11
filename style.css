@@ -8,21 +8,28 @@
 
 body {
 
-    background-image: url('images/index/wallpaper.jpg');
-
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    margin-top: 10px;
 
 }
 
-body, html{
+html{
     margin: 0!important;
+    /* background: linear-gradient(to bottom, #ac417e, #a25192, #9561a2, #876eae, #7a7ab4, #6b82b7, #5f88b7, #568eb5, #4791af, #4093a6, #41959c, #499590) no-repeat; */
+    /*background: linear-gradient(to bottom, #ac417e, #be4758, #b95e35, #a27920, #7d8f2d, #57934c, #2f936b, #009085, #007e8b, #006b8a, #025780, #2e426d) no-repeat; */
+
 }
 
 .overlay {
-    background-color: rgba(255, 255, 255, 0.2); /* Couleur de superposition transparente */
-    backdrop-filter: blur(10px); /* Effet de flou */
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 3px solid black;
+
+    width: 1120px;
+    margin: 0 auto;
 
 
 }
@@ -77,32 +84,6 @@ main {
     text-transform: uppercase;
 }
 
-/*Propriété des séparations*/
-header hr{
-    border: 0;
-    margin: 40px 0 40px;
-    height: 3px;
-
-}
-
-
-/*Propriété particuliére pour la séparations du header*/
-.hr-header {
-    margin: 20px 0 0!important;
-}
-
-/*Propriété particuliére pour la séparations du footer*/
-.hr-footer {
-    width: 90%;
-    margin: auto;
-    margin-top: 40px !important;
-}
-
-/*Propriété particuliére pour la séparations de section*/
-.hr-section {
-    margin: 20px 0 60px !important;
-}
-
 
 /***********
    HEADER
@@ -111,10 +92,9 @@ header hr{
 header {
     margin-bottom: 20px;
     position: relative;
-    border: 3px solid black; /* Bord transparent */
-    border-radius: 10px; /* Arrondi des coins du cadre */
+
     /* Couleur de fond*/
-    background: linear-gradient(45deg, #FF2400, #FF8C00, #FFD700, #ADFF2F, #00BFFF, #4B0082, #8B00FF);
+
 }
 
 /*applique des paramétres particulier au titre h1 La vie est en*/
@@ -122,10 +102,15 @@ header h1 {
     z-index: auto;
     position: relative;
     font-size: 65px;
-    color: #0089d2;
+    color: #95aab4;
     padding-top: 20px;
-    width: fit-content;
 
+
+}
+
+header h1 a{
+
+    color: #79a3cb;
 }
 
 /*applique des paramétres particulier au titre h2 COULEURS*/
@@ -133,15 +118,18 @@ header h2 {
     font-size: 63px;
     margin-top: -37px;
     text-transform: uppercase;
-    color: #3d0077;
-    width: fit-content;
-}
 
-/*permet de mettre une ombre sur */
-h2 span {
-    text-shadow: 1px 1px 2px black;
+
 
 }
+
+header h2 a{
+    font-weight: 700!important;
+    color: #000000;
+}
+
+
+
 
 /**********
     NAV
@@ -150,11 +138,13 @@ h2 span {
 /*enleve le surlignage sur le nav*/
 a {
     text-decoration: none;
+    font-weight: 300;
 }
 
 /*mettre en evidence l'onglet sélectionner et de changer sa taille*/
 .current a {
     font-size: 27px;
+    font-weight: 700;
 }
 
 
@@ -190,6 +180,10 @@ nav ul li a:hover {
     transform: scale(1.1); /* Augmente la taille de 10% (ajustez la valeur selon votre préférence) */
 }
 
+nav ul li .nav-title {
+    color: red!important;
+}
+
 /************
    SECTION
 ************/
@@ -205,35 +199,6 @@ section h2 {
     /* majuscules */
     text-align: center;
     /*permets de centrer le texte*/
-}
-
-.image-scroll {
-    overflow: hidden; /* Masque la barre de défilement */
-}
-
-.image-scroll-container {
-    width: 100%; /* Ajuste la largeur du conteneur */
-    white-space: nowrap; /* Empêche le retour à la ligne des images */
-}
-
-.image-scroll-wrapper {
-    animation: scrollImages 10s linear infinite; /* Animation pour déplacer les images */
-    display: flex; /* Utilise un conteneur flexible pour les images */
-}
-
-@keyframes scrollImages {
-    0% {
-        transform: translateX(0); /* Départ de l'animation */
-    }
-    100% {
-        transform: translateX(-100%); /* Fin de l'animation */
-    }
-}
-
-.image-scroll img {
-    width: 1120px; /* Largeur des images */
-    height: auto; /* Hauteur des images (ajustée proportionnellement) */
-    margin-right: 10px; /* Marge entre les images */
 }
 
 /*propriété du titre h3*/
